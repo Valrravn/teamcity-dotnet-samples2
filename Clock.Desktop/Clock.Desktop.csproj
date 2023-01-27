@@ -5,6 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C2286800-5AE9-4B83-8F32-E2AFED2D9A79}</ProjectGuid>
+    <RuntimeIdentifiers>win</RuntimeIdentifiers>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Clock.Desktop</RootNamespace>
     <AssemblyName>Clock.Desktop</AssemblyName>
@@ -33,6 +34,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
+    <RuntimeIdentifiers>win</RuntimeIdentifiers>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
@@ -43,6 +45,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
+    <RuntimeIdentifiers>win</RuntimeIdentifiers>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
