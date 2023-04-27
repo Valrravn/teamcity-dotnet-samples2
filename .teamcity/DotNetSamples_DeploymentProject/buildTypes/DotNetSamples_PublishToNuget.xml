@@ -17,7 +17,7 @@
           <param name="command" value="nuget-push" />
           <param name="nuget.packageSource" value="https://teamcity.jetbrains.com/httpAuth/app/nuget/feed/DemoProjects_TeamCity/clock/v3/index.json" />
           <param name="paths" value="packages/*.nupkg" />
-          <param name="secure:nuget.apiKey" value="credentialsJSON:4509052e-6794-48a3-bc0e-d0b1ae1e4d09" />
+          <param name="secure:nuget.apiKey" value="zxx61f89bca1f9b9ac8400f518362b9dc58ec0bd1aa96f4a2c4d3bf3725bfb0a1b0" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>

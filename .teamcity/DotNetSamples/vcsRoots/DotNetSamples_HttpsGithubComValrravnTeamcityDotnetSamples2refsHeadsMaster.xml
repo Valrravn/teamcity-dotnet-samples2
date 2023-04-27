@@ -7,7 +7,7 @@
   <param name="branch" value="refs/heads/master" />
   <param name="ignoreKnownHosts" value="true" />
   <param name="oauthProviderId" value="PROJECT_EXT_5" />
-  <param name="secure:password" value="credentialsJSON:2492437a-27b8-4287-aee7-2c70e908a6e8" />
+  <param name="secure:password" value="zxx01efadc3524fc4f35137e5063ba150eae6643f60a5832397ebb8e1249d072e3f802f387a48357a25775d03cbe80d301b" />
   <param name="submoduleCheckout" value="CHECKOUT" />
   <param name="teamcity:branchSpec" value="refs/heads/*" />
   <param name="url" value="https://github.com/Valrravn/teamcity-dotnet-samples2" />
