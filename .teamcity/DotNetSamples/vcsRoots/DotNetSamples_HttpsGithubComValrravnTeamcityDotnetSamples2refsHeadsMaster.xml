@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vcs-root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8bd1679f-28c2-4eb4-82a8-9f93e5fdb14a" type="jetbrains.git" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>https://github.com/Valrravn/teamcity-dotnet-samples2#refs/heads/master</name>
+  <param name="agentCleanFilesPolicy" value="ALL_UNTRACKED" />
+  <param name="agentCleanPolicy" value="ON_BRANCH_CHANGE" />
+  <param name="authMethod" value="PASSWORD" />
+  <param name="branch" value="refs/heads/master" />
+  <param name="ignoreKnownHosts" value="true" />
+  <param name="oauthProviderId" value="PROJECT_EXT_5" />
+  <param name="secure:password" value="credentialsJSON:2492437a-27b8-4287-aee7-2c70e908a6e8" />
+  <param name="submoduleCheckout" value="CHECKOUT" />
+  <param name="teamcity:branchSpec" value="refs/heads/*" />
+  <param name="url" value="https://github.com/Valrravn/teamcity-dotnet-samples2" />
+  <param name="useAlternates" value="AUTO" />
+  <param name="username" value="Valrravn" />
+  <param name="usernameStyle" value="USERID" />
+</vcs-root>
+

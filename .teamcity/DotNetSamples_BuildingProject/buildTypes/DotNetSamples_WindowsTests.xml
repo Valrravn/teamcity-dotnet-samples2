@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>Test on Windows</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="system.VersionPrefix" value="1.0.0" />
+      <param name="system.VersionSuffix" value="beta%build.number%" />
+      <param name="system.configuration" value="Release" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_1" name="Test" type="dotnet">
+        <parameters>
+          <param name="command" value="test" />
+          <param name="dotNetCoverage.dotCover.attributeFilters" value="-:Clock.ExcludeFromCodeCoverageAttribute" />
+          <param name="dotNetCoverage.dotCover.filters" value="+:Clock" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.DotNetCliTool.2020.2.2%" />
+          <param name="dotNetCoverage.tool" value="dotcover" />
+          <param name="paths" value="Clock.Tests/Clock.Tests.csproj" />
+          <param name="plugin.docker.imagePlatform" value="windows" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="DotNetSamples_SamplesRepo" />
+    </vcs-settings>
+    <requirements>
+      <exists id="RQ_1" name="DotNetCoreSDK5.0_Path" />
+    </requirements>
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_1" type="swabra">
+        <parameters>
+          <param name="swabra.enabled" value="swabra.before.build" />
+          <param name="swabra.strict" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+
