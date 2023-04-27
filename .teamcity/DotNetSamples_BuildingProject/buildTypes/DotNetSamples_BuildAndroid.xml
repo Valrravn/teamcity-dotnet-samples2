@@ -18,7 +18,7 @@
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="msbuild.version" value="MSBuild_16_Windows" />
           <param name="paths" value="Clock.Xamarin.Android/Clock.Xamarin.Android.csproj" />
-          <param name="required.sdk" value="6" />
+          <param name="required.sdk" value="6 7" />
           <param name="targets" value="Restore;Rebuild;SignAndroidPackage" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
