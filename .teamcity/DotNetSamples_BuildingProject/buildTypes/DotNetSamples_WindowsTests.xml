@@ -18,6 +18,7 @@
           <param name="dotNetCoverage.tool" value="dotcover" />
           <param name="paths" value="Clock.Tests/Clock.Tests.csproj" />
           <param name="plugin.docker.imagePlatform" value="windows" />
+          <param name="required.sdk" value="6" />
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
