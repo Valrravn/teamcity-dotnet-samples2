@@ -27,7 +27,7 @@
       <vcs-entry-ref root-id="DotNetSamples_SamplesRepo" />
     </vcs-settings>
     <requirements>
-      <exists id="RQ_1" name="DotNetCoreSDK5.0_Path" />
+      <exists id="RQ_1" name="DotNetCoreSDK6.0_Path" />
     </requirements>
     <build-triggers />
     <build-extensions>
