@@ -15,7 +15,6 @@
           <param name="dotNetCoverage.dotCover.attributeFilters" value="-:Clock.ExcludeFromCodeCoverageAttribute" />
           <param name="dotNetCoverage.dotCover.filters" value="+:Clock" />
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.DotNetCliTool.2020.2.2%" />
-          <param name="dotNetCoverage.tool" value="dotcover" />
           <param name="paths" value="Clock.Tests/Clock.Tests.csproj" />
           <param name="plugin.docker.imagePlatform" value="windows" />
           <param name="required.sdk" value="6" />
