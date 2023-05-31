@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>Pack</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="Clock/bin/Release/*.nupkg =&gt; packages&#xA;Clock.IoC/bin/Release/*.nupkg =&gt; packages" />
+    </options>
+    <parameters>
+      <param name="system.Copyright" value="Copyright © 2023 JetBrains" />
+      <param name="system.RepositoryBranch" value="refs/heads/master" />
+      <param name="system.RepositoryType" value="git" />
+      <param name="system.RepositoryUrl" value="https://github.com/JetBrains/teamcity-dotnet-samples.git" />
+      <param name="system.Title" value="TeamCity .NET sample" />
+      <param name="system.VersionPrefix" value="1.0.0" />
+      <param name="system.VersionSuffix" value="beta%build.number%" />
+      <param name="system.configuration" value="Release" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_1" name="" type="dotnet">
+        <parameters>
+          <param name="command" value="pack" />
+          <param name="paths"><![CDATA[Clock/Clock.csproj
+Clock.IoC/Clock.IoC.csproj]]></param>
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="TeamcityDotnetSamples2_SamplesRepo" />
+    </vcs-settings>
+    <requirements>
+      <exists id="RQ_1" name="DotNetCoreSDK5.0_Path" />
+    </requirements>
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_1" type="swabra">
+        <parameters>
+          <param name="swabra.enabled" value="swabra.before.build" />
+          <param name="swabra.strict" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <dependencies>
+      <depend-on sourceBuildTypeId="TeamcityDotnetSamples2_WindowsTests">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="TeamcityDotnetSamples2_LinuxTests">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+
