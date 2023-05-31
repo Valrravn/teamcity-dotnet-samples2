@@ -68,6 +68,7 @@ object SamplesRepo : GitVcsRoot({
     name = "TeamCity .NET samples"
     url = Settings.gitRepo
     branch = Settings.gitBranch
+    checkoutPolicy = USE_MIRRORS
 })
 
 // Base configuration for builds and tests
