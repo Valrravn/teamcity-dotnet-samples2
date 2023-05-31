@@ -5,7 +5,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.*
 import java.util.*
 
 // TeamCity Kotlin DSL version
-version = "2020.1"
+version = "2023.05"
 
 // Build settings
 open class Settings {
