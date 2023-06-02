@@ -26,6 +26,7 @@ changeBuildType(RelativeId("WindowsTests")) {
     steps {
         update<DotnetTestStep>(0) {
             clearConditions()
+            framework = "7"
             param("dotNetCoverage.tool", "")
         }
     }
