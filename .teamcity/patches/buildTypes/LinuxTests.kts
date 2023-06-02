@@ -11,6 +11,12 @@ To apply the patch, change the buildType with id = 'LinuxTests'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("LinuxTests")) {
+    params {
+        add {
+            param("teamcity.tool.JetBrains.dotCover.DotNetCliTool.2020.2.2", "2020.2.2")
+        }
+    }
+
     expectSteps {
         dotnetTest {
             name = "Test"
